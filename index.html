@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lary o Gato</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/pc.css">
+    <link rel="shortcut icon" href="assets/img/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 650px)">
+</head>
+<body>
+          
+    <img class="lary" onclick="mudarGif()" id="lary" src="assets/img/frame-002.gif" alt="Lary Parado">
+    <audio src="assets/audio/1.mp3" id="audio"></audio>
+    <script>
+
+        const image = document.getElementById('lary');
+        let pathDoGif = 'assets/img/gif.gif';
+        let pathDaImagem = 'assets/img/frame-002.gif';
+
+        function mudarGif(){
+            image.src = pathDoGif; 
+            setTimeout(() => {
+                image.src = pathDaImagem;
+            }, 4500);
+            reproduzirAudio();
+        }
+        let audio = document.getElementById('audio');
+        function reproduzirAudio(){
+            audio.play();
+        }
+
+    </script>
+</body>
+</html>
